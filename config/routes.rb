@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Routes for the Movie resource:
   # CREATE
   get("/movies/new",       { :controller => "movies", :action => "new" })
-  post("/movies",        { :controller => "movies", :action => "create" })
+  post("/movies",          { :controller => "movies", :action => "create" })
 
   # READ
   get("/movies",           { :controller => "movies", :action => "index" })
@@ -10,23 +10,27 @@ Rails.application.routes.draw do
 
   # UPDATE
   get("/movies/:id/edit",  { :controller => "movies", :action => "edit" })
-  patch("/movies/:id", { :controller => "movies", :action => "update" })
+  patch("/movies/:id",     { :controller => "movies", :action => "update" })
 
   # DELETE
-  delete("/movies/:id", { :controller => "movies", :action => "destroy" })
+  delete("/movies/:id",    { :controller => "movies", :action => "destroy" })
   #------------------------------
 
   # Routes for the Actor resource:
-  # CREAT
-  get("/actors/new", { :controller => "actors", :action => "new_form" })
-  get("/add_actor", { :controller => "actors", :action => "create_row" })
+  # CREATE
+  get("/actors/new",       { :controller => "actors", :action => "new" })
+  post("/actors",          { :controller => "actors", :action => "create" })
 
   # READ
-  get("/actors", { :controller => "actors", :action => "index" })
-  get("/actors/:id", { :controller => "actors", :action => "show" })
+  get("/actors",           { :controller => "actors", :action => "index" })
+  get("/actors/:id",       { :controller => "actors", :action => "show" })
+
+  # UPDATE
+  get("/actors/:id/edit",  { :controller => "actors", :action => "edit" })
+  patch("/actors/:id",     { :controller => "actors", :action => "update" })
 
   # DELETE
-  get("/delete_actor/:id", { :controller => "actors", :action => "destroy" })
+  delete("/actors/:id",    { :controller => "actors", :action => "destroy" })
   #------------------------------
 
   # Routes for the Director resource:
